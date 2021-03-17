@@ -16,16 +16,7 @@ let product = document.getElementById('product').value;
 let quantity = document.getElementById('quantity').value;
 
 
-function input() {
-        const response = fetch(store, product, quantity);
-        const json = response.json();
-        displayInput(json);
+function setVar() {
+    let output = document.appendChild('p');
+    output.innerText = `I shopped at ${store} for ${quantity} ${product}.`
 }
-
-let submit = data => {
-    console.log('ANSWER' ,data);
-
-    let submit = document.createElement('p');
-    submit.innerText = `I shopped at ${store} for ${quantity} ${product}`
-}
-
