@@ -10,3 +10,22 @@
 */
 
 //NOTE: Write your code below and push back to your github branch.  SUBMIT YOUR GITHUB URL IN CANVAS
+
+let store = document.getElementById('store').value;
+let product = document.getElementById('product').value;
+let quantity = document.getElementById('quantity').value;
+
+
+function input() {
+        const response = fetch(store, product, quantity);
+        const json = response.json();
+        displayInput(json);
+}
+
+let submit = data => {
+    console.log('ANSWER' ,data);
+
+    let submit = document.createElement('p');
+    submit.innerText = `I shopped at ${store} for ${quantity} ${product}`
+}
+
